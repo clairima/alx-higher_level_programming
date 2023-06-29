@@ -39,4 +39,3 @@ class Square:
             The perimeter of the square.
         """
         pass
-
