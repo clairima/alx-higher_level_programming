@@ -4,8 +4,8 @@ class Rectangle {
     if (w <= 0 || h <= 0) {
       return;
     } else if (w == undefined || h == undefined) {
-        return;
-      }
+      return;
+    }
     this.width = w;
     this.height = h;
   }
