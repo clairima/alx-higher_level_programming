@@ -2,6 +2,7 @@
 import sys
 import MySQLdb
 
+
 def connect_to_database(mysql_username, mysql_password, database_name):
     """
     Connects to the MySQL database with the provided credentials.
@@ -28,6 +29,7 @@ def connect_to_database(mysql_username, mysql_password, database_name):
         print("MySQL Error: {}".format(e))
         sys.exit(1)
 
+
 def fetch_and_display_states(db):
     """
     Fetches and displays states from the connected MySQL database.
@@ -49,9 +51,15 @@ def fetch_and_display_states(db):
         print("MySQL Error: {}".format(e))
         sys.exit(1)
 
+
 if __name__ == "__main__":
+
     if len(sys.argv) != 4:
-        print("Usage: {} <mysql_username> <mysql_password> <database_name>".format(sys.argv[0]))
+        usage_message = (
+            "Usage: {} < mysql_username > < mysql_password > < database_name >"
+            .format(sys.argv[0])
+        )
+        print(usage_message)
         sys.exit(1)
 
     mysql_username = sys.argv[1]
