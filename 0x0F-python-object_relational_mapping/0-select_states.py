@@ -71,3 +71,4 @@ if __name__ == "__main__":
     fetch_and_display_states(db)
 
     db.close()
+

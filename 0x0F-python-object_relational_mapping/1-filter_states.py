@@ -75,3 +75,4 @@ if __name__ == "__main__":
     fetch_states_with_N(db)
 
     db.close()
+
