@@ -8,6 +8,7 @@ import urllib.request
 import urllib.error
 import sys
 
+
 def fetch_url(url):
     """
     Fetches the given URL, handles HTTP errors, and prints the response body.
@@ -20,6 +21,7 @@ def fetch_url(url):
             print(body)
     except urllib.error.HTTPError as e:
         print("Error code:", e.code)
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

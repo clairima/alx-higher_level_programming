@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 """
-This module takes a letter as input, sends a POST request to http://0.0.0.0:5000/search_user
+This module takes a letter as input, sends a POST request.
 with the letter as a parameter, and handles the response accordingly.
 """
 
 import requests
 import sys
 
+
 def search_user(letter):
     """
-    Sends a POST request with the given letter as a parameter and handles the response.
+    Sends a POST request with the given
+    letter as a parameter and handles the response.
     Args:
         letter (str): The letter to be sent as a parameter.
     """
@@ -25,6 +27,7 @@ def search_user(letter):
             print("No result")
     except ValueError:
         print("Not a valid JSON")
+
 
 if __name__ == "__main__":
     letter = sys.argv[1] if len(sys.argv) > 1 else ""
