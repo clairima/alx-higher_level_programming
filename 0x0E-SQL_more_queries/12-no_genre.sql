@@ -1,9 +1,7 @@
 -- lists all shows contained in hbtn_0d_tvshows without a genre linked.
-SELECT g.name AS genre,
-		COUNT(*) AS number of shows
-	FROM tv_genres AS g
-		INNER JOIN tv_show_genres AS t 
-		ON g.id = t.genre_id
-	GROUP BY g.name 
-	ORDER BY number_of_shows DESC;
-
+SELECT s.`title`, g.`genre_id`
+  FROM `tv_shows` AS s
+       LEFT JOIN `tv_show_genres` AS g
+       ON s.`id` = g.`show_id`
+       WHERE g.`genre_id` IS NULL
+ ORDER BY s.`title`, g.`genre_id`;
